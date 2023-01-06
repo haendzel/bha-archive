@@ -1,0 +1,97 @@
+$primary: #0000FF;
+$gray: #999999;
+$black: #000000;
+$white: #FFFFFF;
+$red: #FF0000;
+$purple: #551A8B;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $gray,
+  success: $primary,
+  info: $primary,
+  warning: $red,
+  danger: $red,
+  dark: $black,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  2xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1400px,
+  3xl: 1700px,
+  4xl: 1900px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  2xl: 1320px,
+  3xl: 1480px,
+);
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6.25,
+  7: $spacer * 8.75,
+);
+
+$enable-negative-margins: true;
+
+$grid-gutter-width: 2.5rem;
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$input-btn-padding-y: 25px;
+$form-floating-padding-y: 20px;
+$form-floating-height: 75px;
+$input-btn-padding-x: 30px;
+$input-btn-font-size: 1.375rem;
+$input-bg: #fafafa;
+$input-btn-focus-color: none;
+$input-btn-focus-box-shadow: none;
+$input-border-radius: 5px;
+$input-border-color: #dfdfdf;
+$input-focus-border-color: $black;
+
+$tooltip-color: #323232;
+$tooltip-bg: #fff;
+$tooltip-padding-y: 100px;
+$tooltip-padding-x: 40px;
+$tooltip-opacity: 1;
+$tooltip-max-width: 540px;
+$tooltip-font-size: 1.375rem;
+$tooltip-border-radius: 10px;
+
+$accordion-color: $black;
+$accordion-bg: #fff;
+$accordion-button-bg: #fff;
+$accordion-button-active-bg: #fff;
+$accordion-button-padding-y: 40px;
+$accordion-padding-x: 50px;
+$accordion-icon-width: 22px;
+$accordion-border-color: #fff;
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.079' height='12.66' viewBox='0 0 21.079 12.66'%3E%3Cpath id='arrow' d='M4890.055,585.8l8.418,8.418-8.418,8.418' transform='translate(604.756 -4887.934) rotate(90)' fill='none' stroke='%23e30613' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.079' height='12.66' viewBox='0 0 21.079 12.66'%3E%3Cpath id='arrow' d='M4890.055,585.8l8.418,8.418-8.418,8.418' transform='translate(604.756 -4887.934) rotate(90)' fill='none' stroke='%23e30613' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+
+@mixin full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+$transition-base: all 0.25s ease-in-out;

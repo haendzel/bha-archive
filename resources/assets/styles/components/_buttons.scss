@@ -1,0 +1,28 @@
+.btn {
+    &-primary {
+        
+            background-color: $primary;
+            color: $white;
+            border: 1px solid $primary;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            line-height: 1;
+            transition: $transition-base;
+            cursor: pointer;
+      
+            &:hover {
+                background-color: $white;
+                border: 1px solid $primary;
+                color: $primary;
+                transition: $transition-base;
+            }
+      
+            &:active {
+                background-color: $red;
+                border: 1px solid $red;
+                color: $white;
+                transition: $transition-base;
+            }
+    }
+}

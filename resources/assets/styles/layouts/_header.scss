@@ -1,0 +1,38 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+header {
+  background-color: $gray !important;
+}
+
+.banner {
+  background-color: $gray !important;
+  min-height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid $black; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999 !important;
+
+  .logo-svg {
+    margin-top: 10px;
+    margin-right: 1rem;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+    color: $primary !important;
+  }
+}

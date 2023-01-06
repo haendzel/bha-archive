@@ -1,0 +1,369 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Arial", sans-serif;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 1.5;
+    color: $black;
+    background-color: $gray;
+  }
+  
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: "headline-gothic-atf-round", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 3.375rem;
+    font-family: "NeueBit", monospace;
+  
+    @include media-breakpoint-up(lg) {
+      font-size: 2.725rem;
+    }
+  
+    @include media-breakpoint-up(2xl) {
+      font-size: 4rem;
+    }
+  
+    @include media-breakpoint-up(4xl) {
+      font-size: 5.75rem;
+    }
+  }
+  
+  h2 {
+    font-size: 2.375rem;
+    letter-spacing: 1.3px;
+  
+    @include media-breakpoint-up(lg) {
+      font-size: 2.5rem;
+    }
+  
+    @include media-breakpoint-up(2xl) {
+      font-size: 3.25rem;
+    }
+  
+    &.section-title {
+      margin: 0 auto;
+      font-size: 2.875rem;
+      text-shadow: 5px 5px 10px #00000029;
+      max-width: 50%;
+  
+      @include media-breakpoint-up(lg) {
+        max-width: 100%;
+        font-size: 2.875rem;
+      }
+  
+      @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+      }
+  
+      @include media-breakpoint-up(2xl) {
+        padding-top: 70px;
+        font-size: 4rem;
+      }
+  
+      @include media-breakpoint-up(4xl) {
+        padding-top: 100px;
+        font-size: 5.75rem;
+      }
+    }
+  
+    &.awards-title {
+      max-width: 100%;
+      margin-bottom: 100px;
+    }
+  }
+  
+  h3 {
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+    }
+  
+    @include media-breakpoint-up(xl) {
+      font-size: 1.375rem;
+    }
+  
+    @include media-breakpoint-up(3xl) {
+      font-size: 2rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  
+    @include media-breakpoint-up(lg) {
+      font-size: 1.375rem;
+    }
+  
+    @include media-breakpoint-up(3xl) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  h5 {
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: $primary;
+  
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
+  }
+  
+  .custom-font {
+    font-family: "KG Feeling 22", sans-serif;
+  }
+  
+  p {
+    &.bigger {
+      font-weight: 400;
+      letter-spacing: 0.45px;
+  
+      @include media-breakpoint-up(2xl) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    will-change: color;
+    transition: color 0.3s;
+  
+    &:hover {
+      color: $primary;
+    }
+  }
+  
+  hr {
+    opacity: 1;
+    background-color: rgba($color: $green, $alpha: 0.2);
+  }
+  
+  .background-primary {
+    background-color: $primary;
+  }
+  
+  .background-gray {
+    background-color: $gray;
+  }
+  
+  .background-black {
+    background-color: $black;
+  }
+
+  .color-primary {
+    color: $primary;
+  }
+  
+  .color-white {
+    color: $white;
+  }
+  
+  .tooltip-inner {
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 0.55px;
+    font-size: 1.375rem;
+  
+    @include media-breakpoint-down(3xl) {
+      font-size: 1.25rem;
+    }
+  
+    @include media-breakpoint-down(2xl) {
+      max-width: 400px;
+      padding: 70px 50px;
+    }
+  
+    @include media-breakpoint-down(lg) {
+      padding: 30px 40px;
+      box-shadow: 0 20px 40px #0000000f;
+      margin-left: 10px;
+      max-width: 290px;
+    }
+  }
+  
+  small {
+    font-size: 0.75rem;
+  }
+  
+  img,
+  figure,
+  iframe {
+    max-width: 100%;
+  }
+  
+  table {
+    td {
+      padding: 0 40px 30px 0;
+      vertical-align: top;
+    }
+  }
+  
+  [data-aos=fade-up] {
+    transform: translate3d(0, 50px, 0);
+  }
+  
+  .row-narrow {
+    @include media-breakpoint-up(lg) {
+      max-width: 92%;
+      margin: 0 auto;
+    }
+  }
+  
+  .row-narrow-v2 {
+    @include media-breakpoint-up(lg) {
+      max-width: 85%;
+      margin: 0 auto;
+    }
+  
+    &.add-space {
+      @include media-breakpoint-up(lg) {
+        padding-top: 60px;
+      }
+  
+      @include media-breakpoint-up(xl) {
+        padding-top: 80px;
+      }
+  
+      @include media-breakpoint-up(xl) {
+        padding-top: 140px;
+      }
+    }
+  }
+  
+  section {
+    position: relative;
+    margin: 80px 0;
+  
+    &.columns {
+      margin: 20px 0;
+  
+      @include media-breakpoint-up(lg) {
+        margin: 120px 0;
+      }
+  
+      @include media-breakpoint-up(3xl) {
+        margin: 130px 0;
+      }
+    }
+  
+    &.rules {
+      margin: 100px 0;
+      padding: 90px 0 0 0;
+  
+      @include media-breakpoint-up(lg) {
+        margin: 120px 0;
+      }
+  
+      @include media-breakpoint-up(3xl) {
+        margin: 130px 0;
+      }
+    }
+  
+    &.column-title {
+      margin: 100px 0 0 0;
+      padding: 90px 0 0 0;
+  
+      @include media-breakpoint-up(lg) {
+        margin: 120px 0;
+      }
+  
+      @include media-breakpoint-up(3xl) {
+        margin: 130px 0;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      margin: 120px 0;
+    }
+  
+    @include media-breakpoint-up(lg) {
+      margin: 120px 0;
+    }
+  
+    @include media-breakpoint-up(3xl) {
+      margin: 130px 0;
+    }
+  }
+  
+  .container-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    @include media-breakpoint-up(lg) {
+      padding-left: auto;
+      padding-right: auto;
+    }
+  }
+  
+  
+  .image-wosp-mobile {
+    max-width: 72px;
+  }
+  
+  .logo-mobile {
+    max-width: 100px;
+    margin-right: 12px;
+  
+    @include media-breakpoint-up(md) {
+      max-width: 120px;
+    }
+  }
+
+  .submit-cta {
+      background-color: $primary;
+      color: $white;
+      border: 3px solid $primary;
+      padding: 2px 76px !important;
+      position: fixed;
+      bottom: 40px;
+      right: 0;
+      border-radius: 75px;
+      font-size: 7.5rem;
+      line-height: 1;
+      transition: $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $white;
+        border: 3px solid $primary;
+        color: $primary;
+        transition: $transition-base;
+      }
+
+      &:active {
+          background-color: $red;
+          border: 3px solid $red;
+          color: $white;
+          transition: $transition-base;
+      }
+  }
+
+  .neuebit-font {
+      font-family: "NeueBit", monospace;
+  }
+
+  .wrap {
+      min-height: calc(100vh - 300px);
+      contain: content;
+  }
+
+
+  #wpadminbar {
+      display: none;
+  }
