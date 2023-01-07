@@ -1,0 +1,28 @@
+.categories {
+    padding: 30px 0;
+    border-bottom: 1px solid $black;
+
+    &-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .drop-svg {
+        margin-top: -10px;
+    }
+}

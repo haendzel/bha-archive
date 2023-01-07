@@ -1,6 +1,6 @@
 .btn {
+    outline: none;
     &-primary {
-        
             background-color: $primary;
             color: $white;
             border: 1px solid $primary;
@@ -24,5 +24,50 @@
                 color: $white;
                 transition: $transition-base;
             }
+    }
+    &-black {
+        background-color: $black;
+        color: $white;
+        border: 1px solid $black;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 1rem;
+        line-height: 1;
+        transition: $transition-base;
+        text-transform: uppercase;
+        cursor: pointer;
+  
+        &:hover {
+            background-color: $white;
+            border: 1px solid $primary;
+            color: $primary;
+            transition: $transition-base;
+        }
+  
+        &:active {
+            background-color: $red;
+            border: 1px solid $red;
+            color: $white;
+            transition: $transition-base;
+        }
+    }
+}
+
+.menu-item {
+    @extend .btn-primary;
+    margin-left: 1.5rem;
+    padding: 6px 24px;
+    a { 
+        padding: 0 !important;
+        margin: 0 !important;
+        color: $white !important;
+        display: inline-block;
+        font-family: "NeueBit", monospace;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    &:hover {
+        a { color: $primary !important; }
     }
 }

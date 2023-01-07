@@ -86,28 +86,28 @@ body {
   
   h3 {
     @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   
     @include media-breakpoint-up(xl) {
-      font-size: 1.375rem;
+      font-size: 2rem;
     }
   
     @include media-breakpoint-up(3xl) {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
   
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
   
     @include media-breakpoint-up(lg) {
-      font-size: 1.375rem;
+      font-size: 1.313rem;
     }
   
     @include media-breakpoint-up(3xl) {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
   }
   
@@ -116,16 +116,11 @@ body {
     margin-bottom: 15px;
     font-weight: 400;
     letter-spacing: 0.9px;
-    text-transform: uppercase;
     color: $primary;
   
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
-  }
-  
-  .custom-font {
-    font-family: "KG Feeling 22", sans-serif;
   }
   
   p {

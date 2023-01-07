@@ -1,3 +1,4 @@
-<div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+<div class="bha-title">
+    @svg('big-title', 'big-title-svg')
+    @svg('big-arrow', 'big-arrow')
 </div>
