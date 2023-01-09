@@ -17,12 +17,14 @@
 /** Import theme styles */
 @import "common/typography";
 @import "common/global";
+@import "components/accordion";
 @import "components/buttons";
 @import "components/banner-waves";
 @import "components/comments";
 @import "components/categories";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/wp-block-image";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

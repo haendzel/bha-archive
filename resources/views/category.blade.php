@@ -38,8 +38,8 @@
                         <select class="dropdown-sortby" name="sort-posts" id="sortbox"
                             onchange="document.location.href=location.href+this.options[this.selectedIndex].value;">
                             <option value="">Sort by &nbsp; ↓</option>
-                            <option value="&orderby=date&order=DESC">Newest</option>
-                            <option value="&orderby=date&order=ASC">Oldest</option>
+                            <option value="?orderby=date&order=DESC">Newest</option>
+                            <option value="?orderby=date&order=ASC">Oldest</option>
                         </select>
                     </div>
 
@@ -60,7 +60,7 @@
                 @endwhile
 
                 @if (!have_posts())
-                    <h3>{{ __('Sorry, no results for ' . get_search_query() . ' found.', 'sage') }}</h3>
+                    <h3>{{ __('Sorry, no results were found.', 'sage') }}</h3>
                 @endif
 
                 {!! get_the_posts_navigation() !!}
@@ -68,4 +68,6 @@
         </div>
 
     </div>
+
+    @php $page = get_page_by_title('Submit') @endphp
 @endsection

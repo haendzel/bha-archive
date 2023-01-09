@@ -1,0 +1,37 @@
+.wp-block-image {
+    position: relative;
+    overflow: hidden;
+    transition: $transition-base;
+    mix-blend-mode: darken;
+    &::after {
+        content: '';
+        background: url(http://momentsingraphics.de/Media/BlueNoise/BlueNoise64Tiled.png);
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 300%;
+        height: 300%;
+        opacity: 0.3;
+        transition: $transition-base;
+    }
+
+    img {
+        filter: brightness(0.8) contrast(1.25) grayscale(100%);
+        mix-blend-mode: darken;
+        transition: $transition-base;
+    }
+
+    &:hover {
+        mix-blend-mode: normal;
+        &::after {
+            background: none;
+            transition: $transition-base;
+        }
+
+        img {
+            filter: none;
+            mix-blend-mode: normal;
+            transition: $transition-base;
+        }
+    }
+}

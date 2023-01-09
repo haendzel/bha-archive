@@ -30,4 +30,18 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function get_post_number($postID){
+        $counter = 1;
+        $postCount = 0;
+        while (have_posts()) : the_post();
+            if ($postID == get_the_ID()){
+                $postCount = $counter;
+                echo("true");
+            } else {
+                $counter++;
+            }
+        endwhile;
+        return $postCount;
+    }
 }

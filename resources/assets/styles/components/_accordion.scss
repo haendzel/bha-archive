@@ -1,0 +1,58 @@
+.accordions {
+    width: 100%;
+}
+
+.accordion {
+    &-tab {
+        cursor: pointer;
+
+        &.is-active {
+            color: $primary !important;
+
+            .btn-outline {
+                border-color: $primary !important;
+                h2 { 
+                    color: $primary !important; 
+                    margin-bottom: 0; 
+                }
+            }
+        }
+    }
+
+    &-panel {
+        padding-top: 60px;
+        min-height: 0;
+        max-height: 0;
+        width: 100%;
+        visibility: hidden;
+        margin-top: 0;
+        opacity: 0;
+        transition: $transition-base;
+        background-color: transparent;
+        color: $black;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.is-expanded, .is-opened {
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 400px !important;
+    max-height: 9999px !important;
+    z-index: 100;
+    transition: $transition-base;
+}
+
+.is-expanded {
+    padding-top: 0 !important;
+}
+
+.archive-item {
+    &__year {
+        float: right;
+        text-align: right;
+    }
+}

@@ -56,7 +56,7 @@ let webpackConfig = {
         test: /\.js$/,
         exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
         use: [
-          { loader: 'buble-loader', options: { objectAssign: 'Object.assign' } },
+          { loader: 'buble-loader', options: { objectAssign: 'Object.assign', transforms: { forOf: false} } },
         ],
       },
       {

@@ -18,7 +18,7 @@ body {
   h1,
   h2,
   h3 {
-    font-family: "headline-gothic-atf-round", sans-serif;
+    font-family: "Arial", sans-serif;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -37,6 +37,10 @@ body {
   
     @include media-breakpoint-up(4xl) {
       font-size: 5.75rem;
+    }
+
+    &.bigger {
+      font-size: 16rem;
     }
   }
   
@@ -327,7 +331,7 @@ body {
       padding: 2px 76px !important;
       position: fixed;
       bottom: 40px;
-      right: 0;
+      right: 100px;
       border-radius: 75px;
       font-size: 7.5rem;
       line-height: 1;
@@ -355,10 +359,48 @@ body {
 
   .wrap {
       min-height: calc(100vh - 300px);
-      contain: content;
   }
 
 
   #wpadminbar {
       display: none;
+  }
+
+  .dithered-image {
+    //filter: brightness(0.8) contrast(1.5) grayscale(100%);
+    position: relative;
+
+    &::after {
+      content: '';
+      background: url(http://momentsingraphics.de/Media/BlueNoise/BlueNoise470.png);
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      animation: noiseFX 2s steps(6) infinite;
+    }
+  }
+
+  @keyframes noiseFX {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -10%);
+    }
+    30% {
+      transform: translate(3%, -15%);
+    }
+    50% {
+      transform: translate(12%, 9%);
+    }
+    70% {
+      transform: translate(9%, 4%);
+    }
+    90% {
+      transform: translate(-1%, 7%);
+    }
   }
