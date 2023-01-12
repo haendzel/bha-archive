@@ -1,8 +1,8 @@
 <footer class="content-info">
     <div class="container">
         <div class="group d-flex">
-            <div class="arrow d-block me-5">
-                @svg('big-arrow', 'big-arrow-up')
+            <div class="arrow d-block me-5" onclick=window.scrollTo(0,0)>
+                @svg('big-arrow-up', 'big-arrow-up')
             </div>
             <div class="copyright">
                 @svg('logo-footer', 'logo-footer-svg mb-3')<br />

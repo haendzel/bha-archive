@@ -4,7 +4,41 @@
 
     .big-arrow {
         position: absolute;
-        bottom: 64px;
+        bottom: 96px;
         right: 0;
     }
 }
+
+.bha-title-image {
+    height: 400px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(xl) {
+        height: 350px;
+    }
+
+    @include media-breakpoint-up(2xl) {
+        height: 400px;
+    }
+  }
+
+  .bha-title-subpage {
+      overflow: hidden;
+    height: 142px;
+    width: 100%;
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin-bottom: 90px;
+
+    @include media-breakpoint-up(xl) {
+        height: 128px;
+    }
+
+    @include media-breakpoint-up(2xl) {
+        height: 142px;
+    }
+  }

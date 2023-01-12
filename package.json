@@ -83,7 +83,9 @@
     "canvas": "^2.11.0",
     "canvas-dither": "^1.0.1",
     "ditherjs": "^0.10.0",
+    "glightbox": "^3.2.0",
     "jquery": "^3.3.1",
+    "jquery.ripples": "^0.6.3",
     "swiper": "^8.4.5"
   }
 }

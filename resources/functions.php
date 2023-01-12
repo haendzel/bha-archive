@@ -102,3 +102,13 @@ Container::getInstance()
         return $form;
     }
     add_filter( 'get_search_form', 'wpdocs_my_search_form' );
+
+
+    function add_image_fluid_class($content) {
+        global $post;
+        $pattern        = "/<figure class=\"[A-Za-z-]*\"><img (.*?)class=\".*?\"(.*?)><figcaption>(.*?)<\/figcaption><\/figure>/i";
+        $replacement    = '<figure class="text-center my-3"><img class="figure-img img-fluid" $1$2><figcaption class="text-muted">$3</figcaption></figure>';
+        $content        = preg_replace($pattern,$replacement,$content);
+        return $content;
+     }
+     add_filter('the_content','add_image_fluid_class');

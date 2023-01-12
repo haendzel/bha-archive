@@ -7,7 +7,7 @@
 
 <article @php post_class() @endphp>
     <header>
-        <div class="archive-item accordion-tab row d-flex flex-row align-items-start">
+        <div class="archive-item accordion-tab row d-flex flex-row align-items-start" data-aos="fade-in">
             <div class="col-lg-2">
                 <div class="btn btn-outline">
                     <h2>
@@ -35,24 +35,32 @@
                         </div>
                     @endif
                     @if (!empty($category[1]))
-                        <a href="{{ get_category_link($category[1]->term_id) }}"
-                            class="btn btn-black btn-black__small">#{{ $category[1]->cat_name }}
-                        </a>
+                        <div class="category me-3">
+                            <a href="{{ get_category_link($category[1]->term_id) }}"
+                                class="btn btn-black btn-black__small">#{{ $category[1]->cat_name }}
+                            </a>
+                        </div>
                     @endif
                     @if (!empty($category[2]))
-                        <a href="{{ get_category_link($category[2]->term_id) }}"
-                            class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
-                        </a>
+                        <div class="category me-3">
+                            <a href="{{ get_category_link($category[2]->term_id) }}"
+                                class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
+                            </a>
+                        </div>
                     @endif
                     @if (!empty($category[3]))
-                        <a href="{{ get_category_link($category[3]->term_id) }}"
-                            class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
-                        </a>
+                        <div class="category me-3">
+                            <a href="{{ get_category_link($category[3]->term_id) }}"
+                                class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
+                            </a>
+                        </div>
                     @endif
                     @if (!empty($category[4]))
-                        <a href="{{ get_category_link($category[4]->term_id) }}"
-                            class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
-                        </a>
+                        <div class="category me-3">
+                            <a href="{{ get_category_link($category[4]->term_id) }}"
+                                class="btn btn-black btn-black__small">#{{ $category[2]->cat_name }}
+                            </a>
+                        </div>
                     @endif
                 </div>
             </div>

@@ -7,20 +7,20 @@
         @include('partials.page-header')
     </div>
 
-    <div class="banner-waves" style="background-image: url(' {{ $banner }} ')"></div>
+    <div class="banner-waves" id="banner" data-aos="fade-in" style="background-image: url(' {{ $banner }} ')"></div>
 
     <div class="container">
-        <div class="row py-6">
-            <div class="col-lg-6">
+        <div class="row py-6" id="content">
+            <div class="col-lg-6" data-aos="fade-in">
                 <h3 class="py-0 my-0">{{ get_field('title', 'options') }}</h3>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-in">
                 <p class="py-0 my-0">{{ get_field('description', 'options') }}</p>
             </div>
         </div>
     </div>
 
-    <div class="categories">
+    <div class="categories" data-aos="fade-in">
         <div class="container">
             <div class="categories-inner">
                 <div class="index-title d-flex flex-row align-items-center justify-content-between">
@@ -37,13 +37,8 @@
                         ]);
                     @endphp
 
-                    <div class="category is-active me-3" id="allFilter">
-                        <a class="btn btn-black" href="{{ home_url('/') }}">{{ __('#All', 'bha') }}
-                        </a>
-                    </div>
-
                     @foreach ($categories as $cat)
-                        @if ($cat->term_id !== 1)
+                        @if ($cat->term_id !== 1 && $loop->iteration < 4)
                             @php echo '<div class="category me-3" data-category="' . $cat->term_id . '"><a class="btn btn-black" href="' . get_category_link($cat->term_id) . '" ' . 'data-category="' . $cat->name .'">' . '#' . $cat->name .  '</a></div>';  @endphp
                         @endif
                     @endforeach
@@ -57,8 +52,8 @@
                         <select class="dropdown-sortby" name="sort-posts" id="sortbox"
                             onchange="document.location.href=location.href+this.options[this.selectedIndex].value;">
                             <option value="">Sort by &nbsp; ↓</option>
-                            <option value="&orderby=date&order=DESC">Newest</option>
-                            <option value="&orderby=date&order=ASC">Oldest</option>
+                            <option value="?orderby=date&order=DESC">Newest</option>
+                            <option value="?orderby=date&order=ASC">Oldest</option>
                         </select>
                     </div>
 

@@ -17,6 +17,30 @@
                 }
             }
         }
+
+        &:active, &:focus {
+            color: $red !important;
+
+            .btn-outline {
+                border-color: $red !important;
+                h2 { 
+                    color: $red !important; 
+                    margin-bottom: 0; 
+                }
+            }
+        }
+
+        &:hover {
+            color: $white !important;
+
+            .btn-outline {
+                border-color: $white !important;
+                h2 { 
+                    color: $white !important; 
+                    margin-bottom: 0; 
+                }
+            }
+        }
     }
 
     &-panel {
@@ -40,8 +64,9 @@
 .is-expanded, .is-opened {
     visibility: visible !important;
     opacity: 1 !important;
-    min-height: 400px !important;
+    min-height: 100px !important;
     max-height: 9999px !important;
+    padding-bottom: 40px;
     z-index: 100;
     transition: $transition-base;
 }
@@ -54,5 +79,11 @@
     &__year {
         float: right;
         text-align: right;
+    }
+}
+
+.is-active {
+    h3 { 
+        transition: $transition-base !important;
     }
 }

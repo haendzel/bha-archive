@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="categories mt-3">
+    <div class="categories mt-5">
         <div class="container">
             <div class="categories-inner">
                 <div class="index-title d-flex flex-row align-items-center justify-content-between">
@@ -18,13 +18,9 @@
                         ]);
                     @endphp
 
-                    <div class="category is-active me-3" id="allFilter">
-                        <a class="btn btn-black" href="{{ home_url('/') }}">{{ __('#All', 'bha') }}
-                        </a>
-                    </div>
 
                     @foreach ($categories as $cat)
-                        @if ($cat->term_id !== 1)
+                        @if ($cat->term_id !== 1 && $loop->iteration < 4)
                             @php echo '<div class="category me-3" data-category="' . $cat->term_id . '"><a class="btn btn-black" href="' . get_category_link($cat->term_id) . '" ' . 'data-category="' . $cat->name .'">' . '#' . $cat->name .  '</a></div>';  @endphp
                         @endif
                     @endforeach
@@ -70,4 +66,8 @@
     </div>
 
     @php $page = get_page_by_title('Submit') @endphp
+
+    <a href="{{ get_the_permalink($page) }}" class="submit-cta neuebit-font d-block">
+        Submit
+    </a>
 @endsection
